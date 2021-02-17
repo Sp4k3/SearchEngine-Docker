@@ -1,0 +1,22 @@
+Nous pouvons configurer un environnement virtuel dans ce répertoire par ces commandes sur un terminal :
+• python3 -m venv myTidyVEnv // A ne pas refaire
+• source myTidyVEnv/bin/activate
+• pip3 install django djangorestframework requests // A ne pas refaire
+
+
+En suite, nous pouvons déployer le serveur du canevas sur localhost :
+• cd mySearchEngine/
+• python3 manage.py runserver
+
+
+NB: Après l’ajout d’une nouvelle classe à <apiName>/models.py
+il faut exécuter sur terminal:
+• python3 manage.py makemigrations <apiName>
+• python3 manage.py migrate
+
+
+Dans l’API-cloné sur localhost, la liste des ProduitEnPromotion, ProduitsDisponibles, Images peut être mise à jour par appel à une commande
+Django:
+• Usage: python3 manage.py refreshOnSaleList
+• Usage: python3 manage.py refreshAvailableList
+• Usage: python3 manage.py refreshImageList
